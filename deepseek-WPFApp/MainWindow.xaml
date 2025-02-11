@@ -1,12 +1,58 @@
 ﻿<Window x:Class="deepseek_WPFApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:deepseek_WPFApp"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="DeepSeek Chat" Height="450" Width="800">
     <Grid>
+        <!-- Title -->
+        <TextBlock Text="DeepSeek-R1" 
+               HorizontalAlignment="Center" 
+               Margin="0,20,0,0" 
+               FontFamily="Arial" 
+               FontSize="24" 
+               TextAlignment="Center" />
 
+        <!-- Input Field -->
+        <Border BorderThickness="1" 
+            BorderBrush="Black" 
+            CornerRadius="5" 
+            Padding="2" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            Width="600" 
+            Height="60" 
+            Margin="0,70,0,0">
+            <TextBox x:Name="InputTextBox" 
+               Text="Ask DeepSeek" 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Center" 
+               Width="580" 
+               Height="40" 
+               BorderBrush="{x:Null}" 
+               FontFamily="Arial" 
+               FontSize="16"/>
+        </Border>
+
+        <!-- Ask Button -->
+        <Button Content="Ask" 
+            HorizontalAlignment="Right" 
+            Margin="0,70,30,0" 
+            VerticalAlignment="Top" 
+            Height="40" 
+            Width="65" 
+            Click="AskButton"/>
+
+        <!-- Output Display -->
+        <Border BorderThickness="1" 
+            BorderBrush="Black" 
+            CornerRadius="5" 
+            Padding="2" 
+            Margin="70,150,70,40">
+            <TextBlock x:Name="OutputTextBlock" 
+                 Text="..." 
+                 TextWrapping="Wrap" 
+                 FontFamily="Arial" 
+                 FontSize="24" 
+                 VerticalAlignment="Top"/>
+        </Border>
     </Grid>
 </Window>
